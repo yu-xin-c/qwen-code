@@ -23,7 +23,7 @@ const boundaryMocks = vi.hoisted(() => ({
 }));
 
 vi.mock(
-  '../utils/tool-result-boundary-diagnostics.js',
+  '../tools/tool-result-boundary-diagnostics.js',
   async (importOriginal) => ({
     ...(await importOriginal<
       typeof import('../tools/tool-result-boundary-diagnostics.js')
