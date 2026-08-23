@@ -10,17 +10,17 @@ import * as path from 'node:path';
 import type { Part, PartListUnion } from '@google/genai';
 import type { Config } from '../config/config.js';
 import { StandardFileSystemService } from '../services/fileSystemService.js';
-import { getErrorMessage, isAbortError } from './errors.js';
+import { getErrorMessage, isAbortError } from '../utils/errors.js';
 import type {
   ProcessedFileReadResult,
   ProcessSingleFileContentOptions,
-} from './fileUtils.js';
+} from '../utils/fileUtils.js';
 import {
   detectFileType,
   isCacheableReadResult,
   processSingleFileContent,
-} from './fileUtils.js';
-import { getFolderStructure } from './getFolderStructure.js';
+} from '../utils/fileUtils.js';
+import { getFolderStructure } from '../utils/getFolderStructure.js';
 
 /**
  * Options for reading multiple files.
